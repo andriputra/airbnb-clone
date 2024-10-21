@@ -4,15 +4,21 @@ import Footer from '../components/Footer';
 import Form from '../components/Form';
 import QuestionSection from '../components/QuestionSection';
 import Comparation from '../components/Comparation';
+import Apartments from '../components/Apartments';
+import Feature from '../components/Feature';
+import MainFeature from '../components/MainFeature';
 
 const HomePage = () => {
   return (
     <div>
       <Header />
-      <div className="max-w-screen-lg mx-auto mt-10 p-4">
+      {/* <div className="max-w-screen-lg mx-auto mt-10 p-4">
         <h2 className="text-3xl font-bold text-center">Host Your Home on Airbnb</h2>
         <Form />        
-      </div>
+      </div> */}
+      <MainFeature/>
+      <Feature/>
+      <Apartments/>
       <Comparation/>
       <QuestionSection/>
       <Footer />
