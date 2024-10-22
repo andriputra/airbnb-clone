@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareFacebook, faSquareXTwitter, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 const Footer = () => {
     return (
       <footer className="bg-[#f7f7f7] border-t border-[#DDDDDD] py-10">
@@ -48,9 +52,15 @@ const Footer = () => {
                 <span><a href="#" className="hover:underline">Sitemap</a></span>
             </div>
             <div className="flex items-center space-x-4 text-black">
-                <span>English (US)</span>
-                <span>Pilih mata uang</span>
+                <span className='items-center flex gap-2'><FontAwesomeIcon icon={faGlobe} className='text-[15px]'/> English (US)</span>
                 <span>Rp IDR</span>
+                <span>
+                  <ul className='flex gap-2'>
+                    <li><a href="#"><FontAwesomeIcon icon={faSquareFacebook} className='text-[20px]'/></a></li>
+                    <li><a href="#"><FontAwesomeIcon icon={faSquareXTwitter} className='text-[20px]'/></a></li>
+                    <li><a href="#"><FontAwesomeIcon icon={faSquareInstagram} className='text-[20px]'/></a></li>
+                  </ul>
+                </span>
             </div>
         </div>
       </footer>

@@ -1,22 +1,22 @@
 const Feature = () => {
   return (
-    <div className="max-w-screen-xl mx-auto py-12">
-      <h1 className="text-4xl font-semibold text-gray-800 mb-8 text-center">
+    <div className="max-w-screen-xl mx-auto py-20">
+      <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center lg:text-[2.8rem]">
         Airbnb it easily with Airbnb Setup
       </h1>
       <div className="relative">
         <img
           src="/assets/img/bg-wide.webp"
           alt="Feature Image"
-          className="w-full h-100 object-cover rounded-xl"
+          className="w-full h-80 md:h-[500px] object-cover rounded-xl"
         />
-        <div className="absolute inset-0 "></div>
+        <div className="absolute inset-0"></div>
       </div>
 
-      <div className="text-left mt-12 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="text-left mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
           <div className="transition">
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800">
               One-to-one guidance from a Superhost
             </h3>
             <p className="text-gray-700">
@@ -27,7 +27,7 @@ const Feature = () => {
           </div>
 
           <div className="transition">
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800">
               An experienced guest for your first booking
             </h3>
             <p className="text-gray-700">
@@ -38,7 +38,7 @@ const Feature = () => {
           </div>
 
           <div className="transition">
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800">
               Specialized support from Airbnb
             </h3>
             <p className="text-gray-700">

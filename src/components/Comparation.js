@@ -60,39 +60,39 @@ const data = [
 
 const Comparation = () => {
   return (
-    <div className="max-w-screen-md mx-auto py-6">
+    <div className="max-w-full lg:max-w-[47%] mx-auto py-6 my-[3rem] px-4">
       <img 
         src="/assets/img/logo-img.webp" 
         alt="Placeholder" 
-        className="w-1/6 h-auto mx-auto" 
+        className="w-1/2 lg:w-1/4 h-auto mx-auto mb-4" 
       />
-      <h2 className="text-4xl font-semibold mb-4 text-center">Airbnb it with top‑to‑bottom protection</h2>
+      <h2 className="text-xl lg:text-[2.8rem] font-bold mb-10 text-center leading-[1]">Airbnb it with top‑to‑bottom protection</h2>
 
       <table className="min-w-full table-auto">
         <thead>
           <tr className="text-left">
-            <th className="px-6 py-3 text-sm font-semibold text-gray-600"></th>
-            <th className="px-6 py-3 text-lg font-semibold text-gray-600">Airbnb</th>
-            <th className="px-6 py-3 text-lg font-semibold text-gray-600">Competitors</th>
+            <th className="px-4 lg:px-6 py-3 text-xs lg:text-sm font-semibold text-gray-600 w-[50%]"></th>
+            <th className="px-4 lg:px-6 py-3 text-lg lg:text-[1.3rem] font-semibold text-gray-600 text-center">Airbnb</th>
+            <th className="px-4 lg:px-6 py-3 text-lg lg:text-[1.3rem] font-semibold text-gray-600 text-center">Competitors</th>
           </tr>
         </thead>
         <tbody>
           {data.map((item, index) => (
             <tr key={index} className="border-t border-gray-300">
-              <td className="px-6 py-4 text-gray-700">
-                <h2 className="text-lg font-semibold text-gray-600">{item.title}</h2>
+              <td className="py-2 lg:py-4 text-gray-700">
+                <h2 className="text-sm lg:text-lg font-semibold text-gray-600">{item.title}</h2>
                 <p>{item.description}</p>
               </td>
-              <td className="px-6 py-4 text-center text-lg">
+              <td className="py-2 lg:py-4 text-center text-lg">
                 <FontAwesomeIcon 
                   icon={item.airbnbStatus} 
-                  className={item.airbnbStatus === faCheck ? 'text-green-500' : 'text-red-500'} 
+                  className={`${item.airbnbStatus === faCheck ? 'text-green-500' : 'text-red-500'} text-lg lg:text-[1.6rem]`}
                 />
               </td>
-              <td className="px-6 py-4 text-center text-lg">
+              <td className="py-2 lg:py-4 text-center text-lg">
                 <FontAwesomeIcon 
                   icon={item.competitorsStatus} 
-                  className={item.competitorsStatus === faCheck ? 'text-green-500' : 'text-red-500'} 
+                  className={`${item.competitorsStatus === faCheck ? 'text-green-500' : 'text-red-500'} text-lg lg:text-[1.6rem]`}
                 />
               </td>
             </tr>

@@ -15,10 +15,10 @@ const Form = () => {
         placeholder="Property Name"
         value={propertyName}
         onChange={(e) => setPropertyName(e.target.value)}
-        className="w-full p-3 border border-gray-300 rounded"
+        className="w-full p-3 border border-gray-300 rounded-full focus:outline-none"
       />
-      <button type="submit" className="bg-green-500 text-white p-2 rounded w-full">
-        Start Hosting
+      <button type="submit" className="bg-gray-900 text-white p-2 rounded w-full">
+        Update your estimate
       </button>
     </form>
   );
