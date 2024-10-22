@@ -44,9 +44,9 @@ const MainFeature = () => {
             />
           </div>
           <p className="mt-4">
-            <a href="#" className="text-gray-700">
+            <button className="text-gray-700" onClick={() => {}}>
               Learn how we estimate your earnings
-            </a>
+            </button>
           </p>
           
           <button
