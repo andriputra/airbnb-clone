@@ -41,7 +41,7 @@ const Apartments = () => {
       </div>
 
       <p className="mt-12 text-lg text-gray-900 mb-8">
-        We’ve partnered with apartment buildings across the US so you can rent a place to live and host on Airbnb part-time. The typical host earned <span className="font-bold">$3650/year</span> and hosted 28 nights. *
+        Weve partnered with apartment buildings across the US so you can rent a place to live and host on Airbnb part-time. The typical host earned <span className="font-bold">$3650/year</span> and hosted 28 nights. *
       </p>
       <p className="text-sm text-gray-800 mb-8 px-4">
         *The typical Host earnings amount represents the median amount of earnings for Hosts in US Airbnb-friendly apartment buildings between Jan 1 - Dec 31, 2023, according to internal Airbnb data for revenue earned by Hosts.
