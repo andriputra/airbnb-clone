@@ -48,7 +48,7 @@ const QuestionSection = () => {
                 {item.question}
                 <FontAwesomeIcon
                   icon={openIndex === index ? faChevronUp : faChevronDown}
-                  className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
+                  className={`transition-transform duration-300 ${openIndex === index ? 'rotate-120' : ''}`}
                 />
               </button>
               {openIndex === index && (
