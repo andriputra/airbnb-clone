@@ -1,7 +1,6 @@
 {
   "name": "airbnb-clone",
   "version": "0.1.0",
-  "homepage": "https://project.flexbox.id/airbnb-clone/",
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
@@ -13,7 +12,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,7 +40,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^16.0.1",
-    "jest": "^27.5.1"
+    "@testing-library/react": "^16.0.1"
   }
 }

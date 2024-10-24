@@ -1,3 +1,4 @@
+import React from 'react';
 const Feature = () => {
   return (
     <div className="max-w-screen-xl mx-auto py-20">
@@ -5,7 +6,7 @@ const Feature = () => {
         Airbnb it easily with Airbnb Setup
       </h1>
       <div className="relative">
-        <img
+        <image
           src="/assets/img/bg-wide.webp"
           alt="Feature Image"
           className="w-full h-80 md:h-[500px] object-cover rounded-xl"
