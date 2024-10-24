@@ -6,6 +6,8 @@ import Form from "./Form";
 const MainFeature = () => {
   const [earnings, setEarnings] = useState(5741386);
   const [showModal, setShowModal] = useState(false);
+  const [showModalNumber, setShowModalNumber] = useState(false);
+  const [nights, setNights] = useState(7); // State untuk menyimpan jumlah malam
   const formattedEarnings = earnings.toLocaleString();
 
   const handleSliderChange = (e) => {
@@ -17,6 +19,27 @@ const MainFeature = () => {
 
   const handleModalToggle = () => {
     setShowModal((prev) => !prev);
+  };
+
+  const handleChangesNumber = () => {
+    setShowModalNumber((prev) => !prev);
+  };
+
+  const handleIncreaseNights = () => {
+    setNights((prev) => prev + 1);
+  };
+
+  const handleDecreaseNights = () => {
+    setNights((prev) => (prev > 1 ? prev - 1 : 1)); // Minimal 1 malam
+  };
+
+  const handleSubmit = () => {
+    // Update angka pada elemen dengan ID "NightChange"
+    const nightElement = document.getElementById("NightChange");
+    if (nightElement) {
+      nightElement.textContent = `${nights} nights`;
+    }
+    setShowModalNumber(false); // Tutup modal setelah submit
   };
 
   return (
@@ -33,10 +56,15 @@ const MainFeature = () => {
             Rp {formattedEarnings}
           </p>
           <p className="text-lg md:text-xl">
-            7 nights at an estimated Rp820,198 a night
+            <button onClick={handleChangesNumber} id="NightChange" className="underline">
+              {nights} nights
+            </button>{" "}
+            at an estimated Rp820,198 a night
           </p>
           <div className="my-6">
-            <label htmlFor="earnings-slider" className="sr-only">Adjust Earnings</label>
+            <label htmlFor="earnings-slider" className="sr-only">
+              Adjust Earnings
+            </label>
             <input
               id="earnings-slider"
               type="range"
@@ -50,7 +78,10 @@ const MainFeature = () => {
             />
           </div>
           <p className="mt-4">
-            <button className="text-gray-700" onClick={() => alert("Earnings estimate information...")}>
+            <button
+              className="text-gray-700"
+              onClick={() => alert("Earnings estimate information...")}
+            >
               Learn how we estimate your earnings
             </button>
           </p>
@@ -91,6 +122,55 @@ const MainFeature = () => {
             </button>
             <h2 className="text-xl font-bold mb-4">Tell us about your place</h2>
             <Form />
+          </div>
+        </div>
+      )}
+
+      {showModalNumber && (
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-[15px] p-5 w-[90%] md:w-[25%] relative">
+            <button
+              className="absolute top-3 right-5 text-gray-500 hover:text-gray-800"
+              onClick={handleChangesNumber}
+            >
+              ✕
+            </button>
+            <h2 className="text-xl font-bold mb-4 pb-4 border-b border-b-gray-300 mb-8">
+              How many nights?
+            </h2>
+            <div className="">
+              <div className="flex justify-evenly gap-8 increase-number">
+                <span
+                  onClick={handleDecreaseNights}
+                  className="rounded-full h-[50px] w-[50px] flex justify-center items-center border border-gray-300 hover:border-gray-500 hover:cursor-pointer text-gray-400 hover:text-gray-500 text-[26px] font-bold"
+                >
+                  -
+                </span>
+                <input
+                  type="text"
+                  value={nights}
+                  readOnly
+                  className="border border-gray-500 h-[50px] w-[120px] rounded-lg font-bold text-[24px] gap-0 text-center"
+                />
+                <span
+                  onClick={handleIncreaseNights}
+                  className="rounded-full h-[50px] w-[50px] flex justify-center items-center border border-gray-300 hover:border-gray-500 hover:cursor-pointer text-gray-400 hover:text-gray-500 text-[26px] font-bold"
+                >
+                  +
+                </span>
+              </div>
+              <p className="text-gray-800 text-center font-sm font-bold">Night</p>
+              <p className="text-gray-800 text-center font-sm m-6">
+                Homes available all month average 13 nights booked
+              </p>
+              <button
+                type="submit"
+                className="bg-gray-900 text-white font-bold text-lg p-4 rounded-lg w-full hover:bg-gray-600"
+                onClick={handleSubmit}
+              >
+                Update your estimate
+              </button>
+            </div>
           </div>
         </div>
       )}

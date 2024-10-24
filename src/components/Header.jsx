@@ -7,11 +7,11 @@ const Header = () => {
     <header className="bg-white p-4 sticky top-0 z-50">
       <nav className="max-w-screen-xl mx-auto flex justify-between items-center flex-wrap">
         <div className="flex items-center space-x-2">
-          <img
+          <a href="https://www.airbnb.com/host/homes"><img
             src="/assets/img/logo-airbnb.png"
             alt="Airbnb Logo"
             className="w-8 h-8"
-          />
+          /></a>
         </div>
 
         <div className="flex items-center space-x-4 mt-2 md:mt-0">
